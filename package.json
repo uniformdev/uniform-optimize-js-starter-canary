@@ -1,0 +1,32 @@
+{
+  "name": "@uniformdev/optimize-starter-js",
+  "version": "14.1.1",
+  "license": "Apache-2.0",
+  "private": true,
+  "scripts": {
+    "dev": "run-s clean:snowpack-cache download-intents dev:snowpack",
+    "dev:snowpack": "snowpack dev",
+    "build": "run-s clean:snowpack-cache download-intents build:snowpack",
+    "build:snowpack": "snowpack build",
+    "clean:snowpack-cache": "rimraf node_modules/.cache/snowpack",
+    "download-intents": "uniform optimize manifest download --output ./src/intentManifest.json",
+    "ci:build": "run-s build"
+  },
+  "dependencies": {
+    "@uniformdev/cli": "canary",
+    "@uniformdev/optimize-common": "canary",
+    "@uniformdev/optimize-tracker": "canary",
+    "@uniformdev/optimize-tracker-browser": "canary"
+  },
+  "devDependencies": {
+    "@snowpack/plugin-typescript": "1.2.1",
+    "@types/snowpack-env": "2.3.4",
+    "@uniformdev/cli": "canary",
+    "npm-run-all": "4.1.5",
+    "prettier": "2.5.1",
+    "rimraf": "3.0.2",
+    "snowpack": "3.8.8",
+    "typescript": "4.5.5"
+  }
+}
+

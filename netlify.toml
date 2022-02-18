@@ -1,0 +1,14 @@
+[build]
+  command = 'npm run ci:build'
+  publish = 'build'
+
+[template]
+  incoming-hooks = ["Uniform"]
+
+[template.environment]
+  UNIFORM_API_KEY='Uniform Optimize API Key'
+  UNIFORM_PROJECT_ID='Uniform Optimize Project ID'
+
+
+[build.environment]
+  UNIFORM_CLI_BASE_URL='https://canary.uniform.app'
